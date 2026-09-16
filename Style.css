@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+html{ 
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080b12;
+    color: #f5f7fa;
+    line-height: 1.6;
+    padding-top: 75px;
+}
+
+section {
+    scroll-margin-top: 65px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 110px 30px;
+}
+
+.section-label {
+    color: #6ee7b7;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+h2 {
+    font-size: 42px;
+    line-height: 1.15;
+    margin-bottom: 45px;
+}
+
+h2 span {
+    color: #6ee7b7;
+}
+/* NAV */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(8, 11, 18, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #1c2330;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #6ee7b7;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #aab3c2;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #6ee7b7;
+}
+
+/*ABOUT*/
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    border-top: 1px solid #1c2330;
+}
+
+.about h2 {
+    margin-bottom: 0;
+}
+
+.about-text {
+    color: #9ca6b6;
+    font-size: 17px;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+}
+
+/*PROJECTS SECTION*/
+.projects {
+    border-top: 1px solid #1c2330;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    background: #0d111a;
+    border: 1px solid #202938;
+    padding: 30px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #6ee7b7;
+}
+
+.project-number {
+    color: #596273;
+    font-family: monospace;
+    margin-bottom: 30px;
+}
+
+.project-card h3 {
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: #8994a5;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 25px;
+}
+
+.tags span {
+    font-size: 11px;
+    color: #6ee7b7;
+    border: 1px solid #263b35;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.project-link {
+    color: white;
+    font-size: 13px;
+}
+
+.project-link:hover {
+    color: #6ee7b7;
+}
+
+/*CONTACT*/
+.contact {
+    text-align: center;
+    padding: 130px 30px;
+    border-top: 1px solid #1c2330;
+}
+
+.contact h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.contact p:not(.section-label) {
+    max-width: 550px;
+    margin: 0 auto 30px;
+    color: #8994a5;
+}
+
+/*FOOTER*/
+footer {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: #697486;
+    font-size: 13px;
+
+    border-top: 1px solid #1c2330;
+}
+
+footer div {
+    display: flex;
+    gap: 20px;
+}
+
+footer a:hover {
+    color: #6ee7b7;
+}
+
+/*MOBILE*/
+@media (max-width: 800px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 130px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .cloud-card {
+        display: none;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact h2 {
+        font-size: 42px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        text-align: center;
+    }
+}
