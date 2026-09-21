@@ -48,6 +48,70 @@ h2 {
 h2 span {
     color: #6ee7b7;
 }
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glowPulse {
+    from {
+        text-shadow: 0 0 12px rgba(110, 231, 183, 0.12), 0 0 22px rgba(110, 231, 183, 0.12);
+    }
+    to {
+        text-shadow: 0 0 18px rgba(110, 231, 183, 0.28), 0 0 34px rgba(110, 231, 183, 0.2);
+    }
+}
+
+.intro {
+    min-height: 72vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 120px;
+    padding-bottom: 80px;
+    border-top: 1px solid #1c2330;
+}
+
+.intro-content {
+    max-width: 900px;
+}
+
+.intro-kicker {
+    color: #6ee7b7;
+    font-size: 14px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 18px;
+    opacity: 0;
+    animation: fadeUp 1.5s ease forwards;
+}
+
+.intro h1 {
+    margin: 0;
+    font-size: clamp(3.2rem, 8vw, 8rem);
+    line-height: 0.9;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #f8f8f6;
+    text-shadow: 0 0 22px rgba(110, 231, 183, 0.18);
+    opacity: 0;
+    transform: translateY(18px);
+    animation: fadeUp 1.1s ease 0.15s forwards, glowPulse 3s ease-in-out 1.2s infinite alternate;
+}
+
+.intro h1 span {
+    color: #6ee7b7;
+}
 /* NAV */
 header {
     position: fixed;
